@@ -19,6 +19,9 @@
 - **실시간 UI 업데이트**: Supabase Realtime 구독으로 다중 사용자 변경 즉시 반영.
 - **예약 충돌 방지**: 동일 회의실·겹치는 시간대(confirmed) 중복 예약을 DB 트리거로 차단.
 - **운영 규칙**: 30분 단위, 운영 시간 09:00~18:00 (18 슬롯).
+- **PWA (앱 설치)**: Web App Manifest·아이콘(192/512/maskable/apple-touch) 제공, 홈 화면 설치 지원. 헤더 설치 버튼 및 모바일 상단 설치 배너(iOS는 수동 설치 안내) 제공.
+- **오프라인 지원**: Service Worker 런타임 캐싱(정적 자원 CacheFirst, API·문서 NetworkFirst)으로 오프라인 시 마지막 조회 화면 표시, 온/오프라인 상태 배너 안내.
+- **모바일 UI 최적화**: 세로 화면(standalone) 기준 반응형 그리드·모달·헤더 레이아웃 최적화.
 
 ## 설치 및 실행 방법
 
@@ -30,6 +33,7 @@
 - Next.js 15 (App Router) + React 19 + TypeScript
 - Tailwind CSS v3 (시맨틱 컬러 토큰)
 - Supabase (PostgreSQL) — `@supabase/supabase-js`, Realtime 구독
+- PWA: `@ducanh2912/next-pwa` (Service Worker + Web App Manifest + 오프라인 캐싱)
 - 테스트: Vitest
 
 ### 로컬 실행
@@ -112,7 +116,11 @@ supabase/
 
 ## 수정된 부분
 
-<!-- 최초 버전 -->
+- PWA 변환: `@ducanh2912/next-pwa` 도입, Service Worker 및 런타임 캐싱(정적=CacheFirst, API/문서=NetworkFirst) 설정
+- Web App Manifest(`public/manifest.json`) 및 아이콘(192/512/maskable/apple-touch) 추가, `layout.tsx` PWA 메타 태그 반영
+- 앱 설치 안내 UI 추가: `useInstallPrompt` 훅, 헤더 설치 버튼, 모바일 설치 배너(iOS 수동 안내 포함)
+- 오프라인 지원 추가: `useOnlineStatus` 훅 및 오프라인 상태 배너
+- 모바일 UI 최적화: 헤더·예약 보드·모달 반응형 레이아웃 개선
 
 ## 라이선스
 

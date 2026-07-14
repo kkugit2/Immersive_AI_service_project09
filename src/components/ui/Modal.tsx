@@ -69,13 +69,15 @@ export function Modal({ title, onClose, children }: ModalProps) {
           <button
             onClick={onClose}
             aria-label="닫기"
-            className="grid h-8 w-8 place-items-center rounded-lg text-muted hover:bg-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+            className="grid h-11 w-11 place-items-center rounded-lg text-muted hover:bg-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           >
             <span aria-hidden className="text-lg leading-none">✕</span>
           </button>
         </div>
         <div className="border-t border-edge" />
-        <div className="px-5 py-4">{children}</div>
+        <div className="px-5 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:pb-4">
+          {children}
+        </div>
       </div>
     </div>
   );

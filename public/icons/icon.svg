@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#2563EB"/>
+  <!-- binder tabs -->
+  <rect x="196" y="118" width="26" height="52" rx="13" fill="#ffffff"/>
+  <rect x="290" y="118" width="26" height="52" rx="13" fill="#ffffff"/>
+  <!-- calendar body -->
+  <rect x="140" y="146" width="232" height="228" rx="26" fill="#ffffff"/>
+  <!-- header band -->
+  <path d="M140 172 a26 26 0 0 1 26 -26 h180 a26 26 0 0 1 26 26 v34 h-232 z" fill="#1D4ED8"/>
+  <rect x="168" y="236" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="218" y="236" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="268" y="236" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="318" y="236" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="168" y="284" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="218" y="284" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="268" y="284" width="44" height="40" rx="7" fill="#2563EB"/>
+  <rect x="318" y="284" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="168" y="332" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="218" y="332" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="268" y="332" width="44" height="40" rx="7" fill="#DBEAFE"/>
+  <rect x="318" y="332" width="44" height="40" rx="7" fill="#DBEAFE"/>
+</svg>

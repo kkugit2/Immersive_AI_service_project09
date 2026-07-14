@@ -18,6 +18,7 @@
 - **상태관리**: React Hooks (useState/useEffect) + 커스텀 훅
 - **백엔드/DB**: Supabase (PostgreSQL) — `@supabase/supabase-js`
 - **실시간**: Supabase Realtime 구독
+- **PWA**: `@ducanh2912/next-pwa` (App Router 대응 next-pwa 후속). Service Worker + Web App Manifest + 오프라인 캐싱.
 - **폰트**: Pretendard (CDN), 시스템 폰트 폴백
 - **배포**: Vercel (배포는 test-deploy-manager 서브에이전트 담당)
 
@@ -118,3 +119,6 @@
 | 예약 상세 모달 | `src/components/ReservationDetailModal.tsx` | 상세 보기·취소 |
 | 공통 UI | `src/components/ui/` | Button, Modal, Toast 등 |
 | 메인 페이지 | `src/app/page.tsx` | 보드 조립, 상태 오케스트레이션 |
+| PWA 설정 | `next.config.mjs`, `public/manifest.json`, `public/icons/` | Service Worker(런타임 캐싱: 정적=CacheFirst, API/문서=NetworkFirst) · 매니페스트 · 아이콘(192/512/maskable/apple) |
+| 설치 안내 | `src/hooks/useInstallPrompt.ts`, `src/components/InstallButton.tsx`, `src/components/InstallBanner.tsx` | beforeinstallprompt 처리, 헤더 설치 버튼, 모바일 상단 배너(iOS 수동 안내 포함) |
+| 오프라인 상태 | `src/hooks/useOnlineStatus.ts`, `src/components/OfflineBanner.tsx` | 온/오프라인 감지 및 마지막 조회 데이터 안내 배너 |

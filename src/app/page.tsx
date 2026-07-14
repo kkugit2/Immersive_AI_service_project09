@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { Header } from "@/components/Header";
+import { InstallBanner } from "@/components/InstallBanner";
+import { OfflineBanner } from "@/components/OfflineBanner";
 import { ReservationBoard } from "@/components/ReservationBoard";
 import { ReservationModal } from "@/components/ReservationModal";
 import { ReservationDetailModal } from "@/components/ReservationDetailModal";
@@ -39,6 +41,9 @@ export default function Home() {
         onNextDay={() => shiftDay(1)}
         onToday={() => setCurrentDate(new Date())}
       />
+
+      <InstallBanner />
+      <OfflineBanner />
 
       <main className="mx-auto max-w-[1280px] px-4 py-4 sm:px-8 sm:py-6">
         {error && (

@@ -144,7 +144,8 @@ function pad(n: number) {
 }
 
 function inputClass(error: boolean) {
-  return `h-10 w-full rounded-lg border px-3 text-[14px] text-body outline-none transition-colors focus:ring-2 focus:ring-primary-500 ${
+  // 모바일: 높이 48px·글씨 16px(iOS 자동 확대 방지), 데스크톱: 40px·14px
+  return `h-12 w-full rounded-lg border px-3 text-[16px] text-body outline-none transition-colors focus:ring-2 focus:ring-primary-500 sm:h-10 sm:text-[14px] ${
     error ? "border-error" : "border-[#D1D5DB] focus:border-primary-500"
   }`;
 }

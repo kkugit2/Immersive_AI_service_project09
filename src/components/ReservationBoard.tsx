@@ -13,8 +13,8 @@ import {
   parseDateKey,
 } from "@/lib/time";
 
-const HEADER_H = 40;
-const SLOT_H = 44;
+const HEADER_H = 44;
+const SLOT_H = 48;
 
 interface ReservationBoardProps {
   dateKey: string;
